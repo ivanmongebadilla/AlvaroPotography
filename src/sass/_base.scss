@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+$wallpaper-color: black;
+
+* {
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 62.5%; //1rem = 10px
+  }
+  
+  body {
+    margin: 0;
+    background-color: black;
+  }
