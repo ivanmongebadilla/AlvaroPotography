@@ -34,10 +34,12 @@
         &-text {
             margin-top: 5px;
             margin-bottom: 0px;
+            text-shadow: rgb(80, 16, 16) 5px 5px;
         }
 
         h3 {
             margin-top: 0px;
+            text-shadow: rgb(80, 16, 16) 5px 5px;
         }
     }
 
@@ -49,5 +51,17 @@
 
     &__design {
         font-size: 15px;
+        color: rgb(139, 139, 139);
+    }
+
+    &__icons {
+        &-item {
+            filter: drop-shadow(5px 5px 5px rgb(80, 16, 16));
+            color: rgb(139, 139, 139);
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
     }
 }

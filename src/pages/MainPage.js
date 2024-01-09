@@ -13,10 +13,10 @@ const MainPage = () => {
                     Te invito a ver mis trabajos
                 </h3>
                 <div className="mainpage__icons">
-                    <FaFacebookSquare style={{margin: '0px 10px 0px 10px'}} />
-                    <FaInstagramSquare style={{margin: '0px 10px 0px 10px'}} />
-                    <FaTwitterSquare style={{margin: '0px 10px 0px 10px'}} />
-                    <FaYoutubeSquare style={{margin: '0px 10px 0px 10px'}} />
+                    <FaFacebookSquare style={{margin: '0px 10px 0px 10px'}} className="mainpage__icons-item" />
+                    <FaInstagramSquare style={{margin: '0px 10px 0px 10px'}} className="mainpage__icons-item" />
+                    <FaTwitterSquare style={{margin: '0px 10px 0px 10px'}} className="mainpage__icons-item" />
+                    <FaYoutubeSquare style={{margin: '0px 10px 0px 10px'}} className="mainpage__icons-item" />
                     <span className="mainpage__design">
                         By Ivan Monge
                     </span>
