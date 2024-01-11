@@ -1,3 +1,4 @@
+
 .mainpage {
     color: white;
     display: flex;
@@ -6,10 +7,21 @@
 
     &__logo {
         // margin: auto;
-        width: 15%;
+        width: auto;
         flex: 1;
-        margin-left: 10rem;
+        margin-left: 14rem;
+        font-family: 'Rock Salt', cursive;
+        font-size: 2rem;
+        margin-bottom: 4rem;
+        transform: skew(40deg, -5deg);
     }
+
+    // &__logo {
+    //     // margin: auto;
+    //     width: 15%;
+    //     flex: 1;
+    //     margin-left: 10rem;
+    // }
 
     &__model {
         width: 32%;
@@ -26,12 +38,13 @@
         font-size: 3rem;
         padding: 2rem;
         margin-left: 3rem;
-        margin-top: 6rem;
+        margin-top: 8rem;
         display: flex;
         flex-direction: column;
         row-gap: 1rem;
         
         &-text {
+            height: auto;
             margin-top: 5px;
             margin-bottom: 0px;
             text-shadow: rgb(80, 16, 16) 5px 5px;

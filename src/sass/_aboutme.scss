@@ -1,0 +1,53 @@
+.aboutme {
+    color: white;
+    display: flex;
+    align-items: center;
+    height: 45rem;
+    align-items: center;
+    height: 80vh;
+
+    &__left {
+        flex: 3;
+        padding: 2rem;
+        margin-left: 3rem;
+        // margin-top: 6rem;
+
+        &-text {
+            font-size: 3rem;
+        }
+    }
+
+    &__right {
+        flex: 2;
+        width: 80%;
+        height: 100%;
+        position: relative;
+
+        &-model {
+            width: 80%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: 10px;
+        }
+    }
+
+    &__icons {
+        font-size: 3rem;
+    }
+}
+
+.gradient {
+    width: 80%;
+    height: 100%;
+    // background-image: linear-gradient(to top, black, 20%, transparent),
+    //     linear-gradient(to bottom, black, 20%, transparent),
+    //     linear-gradient(to right, black, 20%, transparent),
+    //     linear-gradient(to left, black, 20%, transparent);
+    background-image: radial-gradient(circle, transparent, black),
+        linear-gradient(to right, black, 5%, transparent),
+        linear-gradient(to left, black, 5%, transparent);
+    position: absolute;
+    top: 0;
+    left: 0;
+}

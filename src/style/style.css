@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
 * {
   box-sizing: border-box; }
 
@@ -16,9 +17,13 @@ body {
   align-items: center;
   height: 45rem; }
   .mainpage__logo {
-    width: 15%;
+    width: auto;
     flex: 1;
-    margin-left: 10rem; }
+    margin-left: 14rem;
+    font-family: 'Rock Salt', cursive;
+    font-size: 2rem;
+    margin-bottom: 4rem;
+    transform: skew(40deg, -5deg); }
   .mainpage__model {
     width: 32%;
     padding: 2rem;
@@ -30,11 +35,12 @@ body {
     font-size: 3rem;
     padding: 2rem;
     margin-left: 3rem;
-    margin-top: 6rem;
+    margin-top: 8rem;
     display: flex;
     flex-direction: column;
     row-gap: 1rem; }
     .mainpage__left-text {
+      height: auto;
       margin-top: 5px;
       margin-bottom: 0px;
       text-shadow: #501010 5px 5px; }
@@ -52,6 +58,47 @@ body {
     .mainpage__icons-item:hover {
       cursor: pointer; }
 
+.aboutme {
+  color: white;
+  display: flex;
+  align-items: center;
+  height: 45rem;
+  align-items: center;
+  height: 80vh; }
+  .aboutme__left {
+    flex: 3;
+    padding: 2rem;
+    margin-left: 3rem; }
+    .aboutme__left-text {
+      font-size: 3rem; }
+  .aboutme__right {
+    flex: 2;
+    width: 80%;
+    height: 100%;
+    position: relative; }
+    .aboutme__right-model {
+      width: 80%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 10px; }
+  .aboutme__icons {
+    font-size: 3rem; }
+
+.gradient {
+  width: 80%;
+  height: 100%;
+  background-image: radial-gradient(circle, transparent, black), linear-gradient(to right, black, 5%, transparent), linear-gradient(to left, black, 5%, transparent);
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.portfolio {
+  height: 92vh;
+  background-image: url(../assets/model_img2.PNG);
+  background-repeat: no-repeat;
+  background-size: cover; }
+
 .mainmenu {
   text-align: right;
   font-size: 4rem;
@@ -62,6 +109,8 @@ body {
   flex: 9;
   display: flex;
   justify-content: center; }
+  .menucontent__content a {
+    text-decoration: none; }
   .menucontent__content-item:not(:last-child) {
     margin-right: 10rem; }
   .menucontent__content-item {
@@ -79,3 +128,7 @@ body {
   display: flex;
   justify-content: center;
   width: 100vw; }
+
+.active {
+  text-shadow: #501010 5px 5px;
+  text-decoration: underline !important; }

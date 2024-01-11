@@ -4,7 +4,8 @@ const MainPage = () => {
     return (
         <div className="mainpage">
             <div className="mainpage__left">
-                <img src={require("../assets/logo-png.png")} alt="logo" className="mainpage__logo"/>
+                {/* <img src={require("../assets/logo-png.png")} alt="logo" className="mainpage__logo"/> */}
+                <h1 className="mainpage__logo">Alvaro Photography</h1>
                 <h1 className="mainpage__left-text">
                     Bienvenido, Mi nombre es Alvaro.<br/>
                     Soy un fotografo y editor de videos<br/>

@@ -1,24 +1,25 @@
 import { IoMdClose } from "react-icons/io";
+import { NavLink } from 'react-router-dom';
 
 const MenuContent = (props) => {
     return (
         <div className="menucontent__container">
             <div className="menucontent__content">
-                <div className="menucontent__content-item">
+                <NavLink to='/' className={({isActive}) => isActive ? "menucontent__content-item active" : "menucontent__content-item" }>
                     Inicio
-                </div>
-                <div className="menucontent__content-item">
+                </NavLink>
+                <NavLink to='/aboutme' className="menucontent__content-item">
                     Acerca de Mi
-                </div>
-                <div className="menucontent__content-item">
+                </NavLink>
+                <NavLink to='/portfolio' className="menucontent__content-item">
                     Portafolio
-                </div>
-                <div className="menucontent__content-item">
+                </NavLink>
+                <NavLink to='/contact' className="menucontent__content-item">
                     Contacto
-                </div>
-                <div className="menucontent__content-item">
+                </NavLink>
+                <NavLink to='/price' className="menucontent__content-item">
                     Precios
-                </div>
+                </NavLink>
             </div>
             <div className="menucontent__icon">
                 <IoMdClose onClick={props.closeMenu}/>

@@ -17,6 +17,10 @@
         display: flex;
         justify-content: center;
 
+        a {
+            text-decoration: none;
+        }
+
         &-item:not(:last-child) {
             margin-right: 10rem;
         }
@@ -41,4 +45,9 @@
         width: 100vw;
         // background-color: white;
     }
+}
+
+.active {
+    text-shadow: rgb(80, 16, 16) 5px 5px;
+    text-decoration: underline !important;
 }
