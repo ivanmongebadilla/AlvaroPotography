@@ -1,4 +1,4 @@
-import { GiHamburgerMenu } from "react-icons/gi";
+// import { GiHamburgerMenu } from "react-icons/gi";
 import { useState } from "react";
 import MenuContent from "./MenuContent";
 
@@ -11,7 +11,7 @@ const Menu = () => {
     
     return (
         <div className="mainmenu">
-            { !showMenu && <GiHamburgerMenu style={{color: "white"}} onClick={menuHandler} /> }
+            { !showMenu && <div style={{color: "white"}} onClick={menuHandler}>MENU</div> }
             { showMenu && <MenuContent closeMenu={menuHandler}/>}
         </div>
     )

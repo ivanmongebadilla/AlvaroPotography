@@ -1,0 +1,43 @@
+.contact {
+    display: flex;
+
+    &__container {
+        flex: 2;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+
+        &-icon {
+            flex: 1;
+            font-size: 25rem;
+            color: white;
+            display: flex; 
+            flex-basis: calc(50% - 40px);  
+            justify-content: center;
+            flex-direction: column;
+            filter: drop-shadow(15px 15px 15px rgb(80, 16, 16));
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__footer {
+        text-align: center;
+        flex: 1;
+
+        &-text {
+            font-size: 7rem;
+            color: white;
+            margin-bottom: 0;
+            // display: inline-block;
+        }
+
+        p {
+            font-size: 5rem;
+            color: white;
+            margin-top: 5px;
+        }
+    }
+}
