@@ -4,14 +4,18 @@ import Menu from "./components/Menu";
 import {
   createBrowserRouter,
   RouterProvider,
+  useLocation
 } from "react-router-dom";
 import AboutMe from "./pages/AboutMe";
 import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
 import Prices from './pages/Prices';
+import { AnimatePresence } from "framer-motion";
 
 
 function App() {
+
+  const location = useLocation();
   
   const router = createBrowserRouter([
     {
@@ -52,7 +56,9 @@ function App() {
   ]);
 
   return (
-    <RouterProvider router={router}/>
+    <AnimatePresence>
+      <RouterProvider router={router}/>
+    </AnimatePresence>
   );
 }
 

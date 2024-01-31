@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState, useRef } from 'react';
 import { FaFacebookSquare, FaInstagramSquare, FaYoutubeSquare, FaTwitterSquare } from "react-icons/fa";
+import { motion } from 'framer-motion';
 
 const Portfolio = () => {
 
@@ -29,35 +30,40 @@ const Portfolio = () => {
             {/* <SyncLoader color='#FFFFFF'/> */}
           </div>
               
-          <div className='portfolio' style={{display: loading ? "none" : "grid"}}>
+          <motion.div className='portfolio' style={{display: loading ? "none" : "grid"}}
+            initial={{ opacity: 0, scale: 0}}
+            animate={{opacity: 1, scale: 1}}
+            exit={{opacity: 0, scale: 0}}
+            transition={{ duration: 1.5 }}
+          >
             <div className='portfolio__item-1'>
-              <img src={require('../assets/img1.jpg')} alt='1' className='portfolio__image' loading='lazy' onLoad={imageLoaded} />
+              <img src={require('../assets/img1.jpg')} alt='1' className='portfolio__image' onLoad={imageLoaded} />
             </div>
             <div className='portfolio__item-2'>
-              <img src={require('../assets/img2.jpg')} alt='2' className='portfolio__image' loading='lazy' onLoad={imageLoaded} />
+              <img src={require('../assets/img2.jpg')} alt='2' className='portfolio__image' onLoad={imageLoaded} />
             </div>
             <div className='portfolio__item-3'>
-              <img src={require('../assets/img3.jpg')} alt='3' className='portfolio__image' loading='lazy' onLoad={imageLoaded} />
+              <img src={require('../assets/img3.jpg')} alt='3' className='portfolio__image' onLoad={imageLoaded} />
             </div>
             <div className='portfolio__item-4'>
-              <img src={require('../assets/img4.jpg')} alt='4' className='portfolio__image' loading='lazy' onLoad={imageLoaded} />
+              <img src={require('../assets/img4.jpg')} alt='4' className='portfolio__image' onLoad={imageLoaded} />
             </div>
             <div className='portfolio__item-5'>
-              <img src={require('../assets/img5.jpg')} alt='5' className='portfolio__image' loading='lazy' onLoad={imageLoaded} />
+              <img src={require('../assets/img5.jpg')} alt='5' className='portfolio__image' onLoad={imageLoaded} />
             </div>
             <div className='portfolio__item-6'>
-              <img src={require('../assets/img6.jpg')} alt='6' className='portfolio__image' loading='lazy' onLoad={imageLoaded} />
+              <img src={require('../assets/img6.jpg')} alt='6' className='portfolio__image' onLoad={imageLoaded} />
             </div>
             <div className='portfolio__item-7'>
-              <img src={require('../assets/img7.jpg')} alt='7' className='portfolio__image' loading='lazy' onLoad={imageLoaded} />
+              <img src={require('../assets/img7.jpg')} alt='7' className='portfolio__image' onLoad={imageLoaded} />
             </div>
             <div className='portfolio__item-8'>
-              <img src={require('../assets/img8.jpg')} alt='8' className='portfolio__image' loading='lazy' onLoad={imageLoaded} />
+              <img src={require('../assets/img8.jpg')} alt='8' className='portfolio__image' onLoad={imageLoaded} />
             </div>
             <div className='portfolio__item-9'>
-              <img src={require('../assets/img9.jpg')} alt='9' className='portfolio__image' loading='lazy' onLoad={imageLoaded} />
+              <img src={require('../assets/img9.jpg')} alt='9' className='portfolio__image' onLoad={imageLoaded} />
             </div>
-          </div>
+          </motion.div>
 
           <div className='portfolio__footer'>
             <h3 className='portfolio__footer-text'>Ver mas en mis redes</h3>

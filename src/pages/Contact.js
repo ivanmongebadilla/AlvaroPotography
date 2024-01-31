@@ -1,9 +1,15 @@
 import React from 'react';
 import { FaFacebookSquare, FaInstagramSquare, FaYoutubeSquare, FaTwitterSquare } from "react-icons/fa";
+import { motion } from 'framer-motion';
 
 const Contact = () => {
   return (
-    <div className='contact'>
+    <motion.div className='contact'
+      initial={{ opacity: 0, scale: 0}}
+      animate={{opacity: 1, scale: 1}}
+      exit={{opacity: 0, scale: 0}}
+      transition={{ duration: 1.5 }}
+    >
         <div className='contact__footer'>
           <h3 className='contact__footer-text'>Telefono:</h3>
           <p>123456789</p>
@@ -20,7 +26,7 @@ const Contact = () => {
           <h3 className='contact__footer-text'>Telefono: 123456789</h3>
           <h3 className='contact__footer-text'>Whatsapp: 123456789</h3>
         </div> */}
-    </div>
+    </motion.div>
   )
 }
 
