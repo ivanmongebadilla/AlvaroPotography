@@ -1,10 +1,9 @@
-import { Fragment } from "react";
 import MainPage from "./pages/MainPage";
 import Menu from "./components/Menu";
 import {
-  createBrowserRouter,
-  RouterProvider,
-  useLocation
+  Routes,
+  useLocation,
+  Route
 } from "react-router-dom";
 import AboutMe from "./pages/AboutMe";
 import Portfolio from './pages/Portfolio';
@@ -17,48 +16,58 @@ function App() {
 
   const location = useLocation();
   
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Fragment>
-                  <Menu />
-                  <MainPage />
-                </Fragment>,
-    },
-    {
-      path: "/aboutme",
-      element: <Fragment>
-        <Menu />
-        <AboutMe />
-      </Fragment>
-    },
-    {
-      path: "/portfolio",
-      element: <Fragment>
-        <Menu />
-        <Portfolio />
-      </Fragment>
-    },
-    {
-      path: "/contact",
-      element: <Fragment>
-        <Menu />
-        <Contact />
-      </Fragment>
-    },
-    {
-      path: "/price",
-      element: <Fragment>
-        <Menu />
-        <Prices />
-      </Fragment>
-    }
-  ]);
+  // const router = createBrowserRouter([
+  //   {
+  //     path: "/",
+  //     element: <Fragment>
+  //                 <Menu />
+  //                 <MainPage />
+  //               </Fragment>,
+  //   },
+  //   {
+  //     path: "/aboutme",
+  //     element: <Fragment>
+  //       <Menu />
+  //       <AboutMe />
+  //     </Fragment>
+  //   },
+  //   {
+  //     path: "/portfolio",
+  //     element: <Fragment>
+  //       <Menu />
+  //       <Portfolio />
+  //     </Fragment>
+  //   },
+  //   {
+  //     path: "/contact",
+  //     element: <Fragment>
+  //       <Menu />
+  //       <Contact />
+  //     </Fragment>
+  //   },
+  //   {
+  //     path: "/price",
+  //     element: <Fragment>
+  //       <Menu />
+  //       <Prices />
+  //     </Fragment>
+  //   }
+  // ]);
+
 
   return (
-    <AnimatePresence>
-      <RouterProvider router={router}/>
+    // <RouterProvider router={router}/>
+    <AnimatePresence mode="wait">
+        <Menu />
+        <Routes location={location} key={location.key}>
+          <Route exact path="/" element={<MainPage/>}/>
+          <Route path="/aboutme" element={<AboutMe/>}/>
+          <Route path="/portfolio" element={<Portfolio/>}/>
+          <Route path="/contact" element={<Contact/>}/>
+          <Route path="/price" element={<Prices/>}/>
+        </Routes>
     </AnimatePresence>
+    
   );
 }
 

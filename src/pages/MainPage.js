@@ -2,6 +2,7 @@ import { FaFacebookSquare, FaInstagramSquare, FaYoutubeSquare, FaTwitterSquare }
 import { motion } from "framer-motion";
 
 const MainPage = () => {
+    
     return (
             <motion.div className="mainpage"
                 initial={{ opacity: 0, scale: 0}}
