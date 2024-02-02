@@ -57,16 +57,18 @@ function App() {
 
   return (
     // <RouterProvider router={router}/>
-    <AnimatePresence mode="wait">
-        <Menu />
-        <Routes location={location} key={location.key}>
-          <Route exact path="/" element={<MainPage/>}/>
-          <Route path="/aboutme" element={<AboutMe/>}/>
-          <Route path="/portfolio" element={<Portfolio/>}/>
-          <Route path="/contact" element={<Contact/>}/>
-          <Route path="/price" element={<Prices/>}/>
-        </Routes>
-    </AnimatePresence>
+    <div>
+      <Menu />
+      <AnimatePresence mode="wait">
+          <Routes location={location} key={location.key}>
+            <Route exact path="/" element={<MainPage/>}/>
+            <Route path="/aboutme" element={<AboutMe/>}/>
+            <Route path="/portfolio" element={<Portfolio/>}/>
+            <Route path="/contact" element={<Contact/>}/>
+            <Route path="/price" element={<Prices/>}/>
+          </Routes>
+      </AnimatePresence>
+    </div>
     
   );
 }
