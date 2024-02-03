@@ -6,6 +6,7 @@
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
+        width: 100%;
 
         &-icon {
             flex: 1;
@@ -16,9 +17,11 @@
             justify-content: center;
             flex-direction: column;
             filter: drop-shadow(15px 15px 15px rgb(80, 16, 16));
+            transition: all 0.4s ease-in;
 
             &:hover {
                 cursor: pointer;
+                transform: scale(0.9);
             }
         }
     }

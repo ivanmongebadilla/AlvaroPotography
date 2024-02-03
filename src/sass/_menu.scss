@@ -3,6 +3,8 @@
     font-size: 4rem;
     padding-right: 1rem;
     height: 5rem;
+    position: relative;
+    z-index: 2000;
 
     // &__element {
     //     width: 100vw;
@@ -36,13 +38,13 @@
     &__icon {
         flex: 1;
         color: white;
-        padding-right: 1rem;
+        padding-right: 0.8rem;
     }
 
     &__container {
         display: flex;
         justify-content: center;
-        width: 100vw;
+        width: 100%;
         // background-color: white;
     }
 }
@@ -50,4 +52,49 @@
 .active {
     text-shadow: rgb(80, 16, 16) 5px 5px;
     text-decoration: underline !important;
+}
+
+.smallMenu {
+    position: fixed;
+    top: 1rem;
+    right: 2.7rem;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+    font-size: 5rem;
+    // transform: scale(100);
+
+    &__icon {
+        color: white;
+        position: relative;
+        z-index: 3000;
+        font-size: 6rem;
+    }
+
+    &__content {
+        width: 100vw;
+        height: 80vh;
+        position: relative;
+
+        &-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            // text-align: center;
+            list-style-type: none;
+            text-align: center;
+        }
+
+        &-list {
+            margin: 3rem;
+        }
+
+        &-item {
+            text-decoration: none;
+            color: white;
+        }
+    }
 }

@@ -4,7 +4,8 @@
     align-items: center;
     height: 45rem;
     align-items: center;
-    height: 80vh;
+    // height: 80vh;
+    height: auto;
 
     &__left {
         flex: 3;
@@ -23,12 +24,20 @@
         height: 100%;
         position: relative;
 
+        @media only screen and (max-width: $bp-largest) {
+            height: 50%;
+          }
+
         &-model {
             width: 80%;
             height: 100%;
             object-fit: cover;
             display: block;
             border-radius: 10px;
+
+            @media only screen and (max-width: $bp-largest) {
+                height: 50%;
+              }
         }
     }
 

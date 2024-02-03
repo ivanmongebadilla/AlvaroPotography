@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { motion } from "framer-motion";
 
 const MenuContent = (props) => {
+
     return (
             <motion.div className="menucontent__container"
                 initial={{ opacity: 0, x: -100}}

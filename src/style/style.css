@@ -6,6 +6,9 @@
 html {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 62.5%; }
+  @media only screen and (max-width: 59.375em) {
+    html {
+      font-size: 43.75%; } }
 
 body {
   margin: 0;
@@ -25,7 +28,8 @@ body {
   background-size: cover;
   border-radius: 10px;
   text-align: center;
-  transition: all 0.5s ease-out; }
+  transition: all 0.5s ease-out;
+  margin: 0.5rem; }
   .card:hover {
     transform: scale(1.2); }
   .card__title {
@@ -51,11 +55,13 @@ body {
     margin-bottom: 4rem;
     transform: skew(40deg, -5deg); }
   .mainpage__model {
-    width: 32%;
+    width: 80%;
     padding: 2rem;
     position: absolute;
-    top: 10%;
-    right: 10%; }
+    top: 60%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    z-index: 1; }
   .mainpage__left {
     flex: 2;
     font-size: 3rem;
@@ -69,12 +75,16 @@ body {
       height: auto;
       margin-top: 5px;
       margin-bottom: 0px;
-      text-shadow: #501010 5px 5px; }
+      text-shadow: #501010 5px 5px;
+      position: relative;
+      z-index: 100; }
     .mainpage__left h3 {
       margin-top: 0px;
       text-shadow: #501010 5px 5px; }
   .mainpage__right {
-    flex: 1; }
+    flex: 1;
+    position: relative;
+    height: 90vh; }
   .mainpage__design {
     font-size: 15px;
     color: #8b8b8b; }
@@ -90,7 +100,7 @@ body {
   align-items: center;
   height: 45rem;
   align-items: center;
-  height: 80vh; }
+  height: auto; }
   .aboutme__left {
     flex: 3;
     padding: 2rem;
@@ -102,12 +112,18 @@ body {
     width: 80%;
     height: 100%;
     position: relative; }
+    @media only screen and (max-width: 59.375em) {
+      .aboutme__right {
+        height: 50%; } }
     .aboutme__right-model {
       width: 80%;
       height: 100%;
       object-fit: cover;
       display: block;
       border-radius: 10px; }
+      @media only screen and (max-width: 59.375em) {
+        .aboutme__right-model {
+          height: 50%; } }
   .aboutme__icons {
     font-size: 3rem; }
 
@@ -191,7 +207,8 @@ body {
     flex: 2;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row; }
+    flex-direction: row;
+    width: 100%; }
     .contact__container-icon {
       flex: 1;
       font-size: 25rem;
@@ -200,9 +217,11 @@ body {
       flex-basis: calc(50% - 40px);
       justify-content: center;
       flex-direction: column;
-      filter: drop-shadow(15px 15px 15px #501010); }
+      filter: drop-shadow(15px 15px 15px #501010);
+      transition: all 0.4s ease-in; }
       .contact__container-icon:hover {
-        cursor: pointer; }
+        cursor: pointer;
+        transform: scale(0.9); }
   .contact__footer {
     text-align: center;
     flex: 1; }
@@ -216,19 +235,21 @@ body {
       margin-top: 5px; }
 
 .prices {
-  margin-top: 2rem;
+  margin-top: 3.5rem;
   display: flex;
   justify-content: center;
   column-gap: 3rem;
   align-content: center;
-  height: 80vh;
+  height: auto;
   flex-wrap: wrap; }
 
 .mainmenu {
   text-align: right;
   font-size: 4rem;
   padding-right: 1rem;
-  height: 5rem; }
+  height: 5rem;
+  position: relative;
+  z-index: 2000; }
 
 .menucontent__content {
   flex: 9;
@@ -247,13 +268,45 @@ body {
 .menucontent__icon {
   flex: 1;
   color: white;
-  padding-right: 1rem; }
+  padding-right: 0.8rem; }
 
 .menucontent__container {
   display: flex;
   justify-content: center;
-  width: 100vw; }
+  width: 100%; }
 
 .active {
   text-shadow: #501010 5px 5px;
   text-decoration: underline !important; }
+
+.smallMenu {
+  position: fixed;
+  top: 1rem;
+  right: 2.7rem;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: red;
+  color: white;
+  font-size: 5rem; }
+  .smallMenu__icon {
+    color: white;
+    position: relative;
+    z-index: 3000;
+    font-size: 6rem; }
+  .smallMenu__content {
+    width: 100vw;
+    height: 80vh;
+    position: relative; }
+    .smallMenu__content-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      list-style-type: none;
+      text-align: center; }
+    .smallMenu__content-list {
+      margin: 3rem; }
+    .smallMenu__content-item {
+      text-decoration: none;
+      color: white; }
