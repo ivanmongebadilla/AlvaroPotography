@@ -3,8 +3,10 @@
 
 $wallpaper-color: black;
 
+$bp-extralarge: 93.75em; // 1500
 $bp-largest: 59.375em; // 950
 $bp-large: 40.625em; // 650
+$bp-medium: 31.25em; // 500
 
 * {
     box-sizing: border-box;

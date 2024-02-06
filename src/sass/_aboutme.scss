@@ -13,6 +13,10 @@
         margin-left: 3rem;
         // margin-top: 6rem;
 
+        @media only screen and (max-width: $bp-medium) {
+            flex: 1;
+        }
+
         &-text {
             font-size: 3rem;
         }
@@ -23,6 +27,12 @@
         width: 80%;
         height: 100%;
         position: relative;
+
+        @media only screen and (max-width: $bp-medium) {
+            flex: 1;
+            width: 90%;
+            height: 100%;
+        }
 
         @media only screen and (max-width: $bp-largest) {
             height: 50%;
@@ -38,6 +48,12 @@
             @media only screen and (max-width: $bp-largest) {
                 height: 50%;
               }
+
+            @media only screen and (max-width: $bp-medium) {
+                width: 80%;
+                height: 100%;
+            }
+    
         }
     }
 
